@@ -15,9 +15,10 @@ def pascal_jesse(lookup_line):
         return pascal_line
 
 
-line = input("Which Pascal Line do you want to see? Enter here: ")
+import time
 
-if int(line) > 0:
-    print(pascal_jesse(int(line)))
-else:
-    raise Exception("Bad entry!")
+start_time = time.time()
+
+line = 500
+print(pascal_jesse(line))
+print("--- %s seconds ---" % (time.time() - start_time))
